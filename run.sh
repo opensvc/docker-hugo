@@ -1,6 +1,5 @@
 #!/bin/sh
 
-HUGO_APPEND_PORT="${HUGO_APPEND_PORT:=true}"
 WATCH="${HUGO_WATCH:=false}"
 SLEEP="${HUGO_REFRESH_TIME:=-1}"
 HUGO_DESTINATION="${HUGO_DESTINATION:=/output}"
@@ -12,12 +11,6 @@ echo "ARGS" $@
 
 HUGO=/usr/local/sbin/hugo
 echo "Hugo path: $HUGO"
-
-if [[ $HUGO_APPEND_PORT != 'false' ]]; then
-    HUGO_APPEND_PORT="true"
-else
-    HUGO_APPEND_PORT="false"
-fi
 
 while [ true ]
 do
